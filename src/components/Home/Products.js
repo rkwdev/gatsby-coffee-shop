@@ -3,7 +3,7 @@ import Product from "./Product"
 import Title from "../Globals/Title"
 import { StaticQuery, graphql } from "gatsby"
 
-const getProducts = graphql`
+export const getProducts = graphql`
   {
     products: allContentfulGatsbyCoffeeProduct {
       edges {
@@ -14,7 +14,7 @@ const getProducts = graphql`
           image {
             fluid(maxHeight: 426) {
               src
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }
